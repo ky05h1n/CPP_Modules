@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:03:07 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/07 17:11:12 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/10 02:15:23 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main()
     int signal = 0;
     int i = 0;
     int j = 0;
+    int index;
 
     std::string option;
     std::cout << "\033[2J\033[H";
@@ -44,13 +45,12 @@ int main()
         {
             if (signal == 1)
             {
-                std::cout << "\033[2J\033[H";
-                start();
-                std::cout << "|\033[1;36m   index    \033[0m|\033[1;36m first name \033[0m|\033[1;36m last name  \033[0m|\033[1;36m nick name  \033[0m|" << std::endl;
-                std::cout << "-----------------------------------------------------" << std::endl;
+                searchoption(1);
                 for (int n = 0; n < j; n++)
                     contactobj.showinfo(n);
                 std::cout << "\n\n";
+                index = selectcontact(j, contactobj);
+                //contactobj.displaycontact(index);
             }
             else
             {
@@ -64,6 +64,6 @@ int main()
         else if (option == "EXIT")
             return (0);
         else
-            printerror(option);
+            printerror1(option);
     }
 }

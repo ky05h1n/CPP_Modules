@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:32:04 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/05 19:42:20 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/10 02:16:30 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Contact {
         public :
                 void storinfo(void);
                 void printinfo(int n);
+                void showcontact(void);
                 
                 
            
@@ -46,12 +47,16 @@ class PhoneBook{
                 
                 void addinfo(int i);
                 void showinfo(int n);
+                //void displaycontact(int n);
 
 };
 
-void printerror(std::string option);
-void start(void);
+void printerror1(std::string option);
+void printerror2(void);
+int selectcontact(int j, PhoneBook phbk);
+void searchoption(int n);
 std::string trancword(std::string& input);
+void start(void);
 
 
 #endif
