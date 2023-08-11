@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:32:04 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/11 03:53:53 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/11 08:09:33 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,9 @@ void printerror1(std::string option);
 void printerror2(void);
 void selectcontact(int j, PhoneBook phbk);
 void searchoption(int n);
+int checkstring(char *str);
+void addmsgerror(void);
+void addmsg(void);
 std::string trancword(std::string& input);
 void start(void);
 

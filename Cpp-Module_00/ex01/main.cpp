@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:03:07 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/11 04:54:30 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/11 06:39:26 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main()
         std::cout << "select from the options bellow : \n\n 1.ADD \n 2.SEARCH \n 3.EXIT\n" << std::endl;
         std::cout << "->";
         std::getline(std::cin, option);
-        if (option == "1")
+        if (option == "ADD")
         {
             contactobj.addinfo(i);
             i++;
@@ -41,7 +41,7 @@ int main()
                 j++;
             signal = 1;
         }
-        else if (option == "2")
+        else if (option == "SEARCH")
         {
             if (signal == 1)
                 selectcontact(j, contactobj);
@@ -54,7 +54,7 @@ int main()
                           << std::endl;
             }
         }
-        else if (option == "3")
+        else if (option == "EXIT")
             return (0);
         else
             printerror1(option);
