@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:01:40 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/10 02:24:34 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/11 04:44:07 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,22 +45,22 @@ void start(void)
 
 void Contact::storinfo(void)
 {
-    std::cout << "add  your first name :" << std::endl;
+    std::cout << "\nadd  your first name : ";
     std::getline(std::cin, first_name);
     first_name = trancword(first_name);
 
-    std::cout << "add  your last name :" << std::endl;
+    std::cout << "\nadd  your last name : ";
     std::getline(std::cin, last_name);
      last_name = trancword(last_name);
 
-    std::cout << "add your nick name :" << std::endl;
+    std::cout << "\nadd your nick name : ";
     std::getline(std::cin, nick_name);
      nick_name = trancword(nick_name);
 
-    std::cout << "add your phone number :" << std::endl;
+    std::cout << "\nadd your phone number : ";
     std::getline(std::cin, phone_number);
 
-    std::cout << "add your darkest secret :" << std::endl;
+    std::cout << "\nadd your darkest secret : ";
     std::getline(std::cin, darkest_secret);
 
     std::cout << "\033[2J\033[H";
@@ -79,10 +79,10 @@ void PhoneBook::showinfo(int n)
     mydata[n].printinfo(n);
 }
 
-// void PhoneBook::displaycontact(int index)
-// {
-//     mydata[index].showcontact();
-// }
+void PhoneBook::displaycontact(int index)
+{
+    mydata[index].showcontact();
+}
 
 void Contact::printinfo(int n)
 {
@@ -95,8 +95,8 @@ void printerror1(std::string option)
         std::cout << "\033[2J\033[H";
         start();
         std::cout << "\033[1;31mWarning : \033[0m";
-        std::cout <<  "no option found for : ";
-        std::cout << option << std::endl;
+        std::cout <<  "no option found for ";
+        std::cout << "\"" << option << "\"" << std::endl;
         std::cout << std::endl;
 }
 
@@ -110,23 +110,46 @@ void printerror2(void)
         
 }
 
-int selectcontact(int j, PhoneBook phbk)
+void selectcontact(int j, PhoneBook phbk)
 {
     int index;
+    std::string opt;
     while (TRUE)
     {
+        searchoption(1);
+        for (int n = 0; n < j; n++)
+            phbk.showinfo(n);
+         std::cout << "\n\n";
          std::cout << "\nTo show more info about a specific contact please chose by index\n->";
          std::cin >> index;
-         if (index > j)
+         while (index > j - 1)
          {
             printerror2();
             searchoption(0);
             for (int n = 0; n < j; n++)
                 phbk.showinfo(n);
             std::cout << "\n\n";
+            std::cout << "\nTo show more info about a specific contact please chose by index\n->";
+            std::cin >> index;
          }
-         else
-            return index;
+             while (TRUE)
+             {
+                searchoption(1);
+                for (int n = 0; n < j; n++)
+                    phbk.showinfo(n);
+                std::cout << "\n\033[1;36mContact number \033[0m" << index << "\033[1;36m selected !\n\n\033[0m";
+                phbk.displaycontact(index);
+                std::cout << "to select another contact please chose 1 or 0 to get back to the main menu\n->";
+                std::getline(std::cin , opt);
+                if (opt == "0")
+                {   
+                    std::cout << "\033[2J\033[H";
+                    start();
+                    return;
+                }
+                else if (opt == "1")
+                    break;
+             }
     }
 }
 
@@ -140,5 +163,12 @@ void searchoption(int n)
     std::cout << "-----------------------------------------------------" << std::endl;
 }
 
-
-
+void    Contact::showcontact(void)
+{
+    std::cout << "  first name : " << first_name << std::endl;
+    std::cout << "  last name : " << last_name << std::endl;
+    std::cout << "  nick name : " << nick_name << std::endl;
+    std::cout << "  phone number : " << phone_number << std::endl;
+    std::cout << "  darkest secret : " << darkest_secret << std::endl;
+    std::cout << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:03:07 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/10 02:15:23 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/11 04:54:30 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ int main()
     start();
     while (TRUE)
     {
-        std::cout << "select from the options bellow : \n\n  ADD | SEARCH | EXIT" << std::endl;
+        std::cout << "select from the options bellow : \n\n 1.ADD \n 2.SEARCH \n 3.EXIT\n" << std::endl;
         std::cout << "->";
         std::getline(std::cin, option);
-        if (option == "ADD")
+        if (option == "1")
         {
             contactobj.addinfo(i);
             i++;
@@ -41,17 +41,10 @@ int main()
                 j++;
             signal = 1;
         }
-        else if (option == "SEARCH")
+        else if (option == "2")
         {
             if (signal == 1)
-            {
-                searchoption(1);
-                for (int n = 0; n < j; n++)
-                    contactobj.showinfo(n);
-                std::cout << "\n\n";
-                index = selectcontact(j, contactobj);
-                //contactobj.displaycontact(index);
-            }
+                selectcontact(j, contactobj);
             else
             {
                 std::cout << "\033[2J\033[H";
@@ -61,7 +54,7 @@ int main()
                           << std::endl;
             }
         }
-        else if (option == "EXIT")
+        else if (option == "3")
             return (0);
         else
             printerror1(option);

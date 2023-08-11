@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 17:32:04 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/10 02:16:30 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/11 03:53:53 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,13 @@ class PhoneBook{
                 
                 void addinfo(int i);
                 void showinfo(int n);
-                //void displaycontact(int n);
+                void displaycontact(int n);
 
 };
 
 void printerror1(std::string option);
 void printerror2(void);
-int selectcontact(int j, PhoneBook phbk);
+void selectcontact(int j, PhoneBook phbk);
 void searchoption(int n);
 std::string trancword(std::string& input);
 void start(void);
