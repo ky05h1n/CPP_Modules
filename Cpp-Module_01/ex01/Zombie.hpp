@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/12 04:09:52 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/13 00:47:26 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 
 class Zombie{
-    
 
     private:
             std::string name;
@@ -29,7 +28,6 @@ class Zombie{
 
 Zombie*     newZombie(std::string name);
 void        randomChump(std::string name);
-Zombie*    zombieHorde( int N, std::string name);
 
 
 #endif

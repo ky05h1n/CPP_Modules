@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/12 04:09:52 by enja             ###   ########.fr       */
+/*   Created: 2023/08/12 03:46:00 by enja              #+#    #+#             */
+/*   Updated: 2023/08/12 04:18:31 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#include "Zombie.hpp"
 
-#include <iostream>
+Zombie::Zombie(std::string _name)
+{
+    name = _name;
+}
 
-class Zombie{
-    
+Zombie::~Zombie()
+{
+    std::cout << name << " : deleted" << std::endl;
+}
 
-    private:
-            std::string name;
-    public:
-        Zombie(std::string _name);
-        ~Zombie();
-        void    announce(void);
-};
-
-
-Zombie*     newZombie(std::string name);
-void        randomChump(std::string name);
-Zombie*    zombieHorde( int N, std::string name);
-
-
-#endif
+void   Zombie::announce(void)
+{
+     std::cout << name <<" : BraiiiiiiinnnzzzZ..." << std::endl;
+}
