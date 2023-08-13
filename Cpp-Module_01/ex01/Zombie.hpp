@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/13 00:47:26 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/13 02:37:59 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,16 @@ class Zombie{
     private:
             std::string name;
     public:
-        Zombie(std::string _name);
+        Zombie();
         ~Zombie();
+        void setName(std::string& name);
         void    announce(void);
 };
 
 
 Zombie*     newZombie(std::string name);
-void        randomChump(std::string name);
+Zombie*     zombieHorde( int N, std::string name);
+ 
 
 
 #endif

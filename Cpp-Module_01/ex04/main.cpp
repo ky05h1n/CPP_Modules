@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/13 02:37:42 by enja             ###   ########.fr       */
+/*   Created: 2023/08/13 08:01:30 by enja              #+#    #+#             */
+/*   Updated: 2023/08/13 08:23:15 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
-
 #include <iostream>
+#include <fstream>
 
-class Zombie{
+int main(int ac , char **av)
+{
+    if (ac != 4)
+    {
+        std::cout << "Usage: " << av[0] << " <filename> <s1> <s2>" << std::endl;
+        return 1;
+    }
+
+    std::ifstream file(av[1], std::ios::in | std::ios::out);
+    if(!file)
+        std::cout << "error no file" << std::endl;
+
+        
+
+    
     
 
-    private:
-            std::string name;
-    public:
-        Zombie(std::string _name);
-        ~Zombie();
-        void    announce(void);
-};
-
-
-Zombie*     newZombie(std::string name);
-void        randomChump(std::string name);
-Zombie*    zombieHorde( int N, std::string name);
-
-
-#endif
+    return 0;
+}

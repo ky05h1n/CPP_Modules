@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/13 02:37:42 by enja             ###   ########.fr       */
+/*   Created: 2023/08/13 03:04:32 by enja              #+#    #+#             */
+/*   Updated: 2023/08/13 04:22:34 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_H
-#define ZOMBIE_H
+#include "HumanA.hpp"
 
-#include <iostream>
-
-class Zombie{
+HumanA::HumanA(std::string _name, Weapon &_wapn): wapn(_wapn)
+{
+    name = _name;
     
-
-    private:
-            std::string name;
-    public:
-        Zombie(std::string _name);
-        ~Zombie();
-        void    announce(void);
-};
+}
 
 
-Zombie*     newZombie(std::string name);
-void        randomChump(std::string name);
-Zombie*    zombieHorde( int N, std::string name);
-
-
-#endif
+void HumanA::attack(void)
+{
+    std::cout << name << " attack with their " << wapn.getType() << std::endl;
+}
