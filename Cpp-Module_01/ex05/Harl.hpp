@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/13 03:04:32 by enja              #+#    #+#             */
-/*   Updated: 2023/08/14 06:25:31 by enja             ###   ########.fr       */
+/*   Created: 2023/08/14 03:53:54 by enja              #+#    #+#             */
+/*   Updated: 2023/08/14 06:37:18 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
 
-HumanA::HumanA(std::string _name, Weapon &_wapn): wapn(_wapn)
-{
-    name = _name;
-}
+#pragma once
+
+#include <iostream>
 
 
-void HumanA::attack(void)
-{
-    std::cout << name << " attack with their " << wapn.getType() << std::endl;
-}
+class Harl{
+
+            private :
+
+                    void debug( void );
+                    void info( void );
+                    void warning( void );
+                    void error( void );
+            public :
+
+                    void    complain(std::string level);
+  
+    
+};

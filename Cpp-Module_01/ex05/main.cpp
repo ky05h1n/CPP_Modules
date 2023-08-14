@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/13 03:04:32 by enja              #+#    #+#             */
-/*   Updated: 2023/08/14 06:25:31 by enja             ###   ########.fr       */
+/*   Created: 2023/08/14 06:35:18 by enja              #+#    #+#             */
+/*   Updated: 2023/08/14 06:43:39 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
+#include "Harl.hpp"
 
-HumanA::HumanA(std::string _name, Weapon &_wapn): wapn(_wapn)
+int main()
 {
-    name = _name;
-}
-
-
-void HumanA::attack(void)
-{
-    std::cout << name << " attack with their " << wapn.getType() << std::endl;
+    
 }
