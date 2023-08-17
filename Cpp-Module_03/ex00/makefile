@@ -6,11 +6,11 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/17 06:26:30 by enja              #+#    #+#              #
-#    Updated: 2023/08/17 06:29:10 by enja             ###   ########.fr        #
+#    Updated: 2023/08/17 08:02:49 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harl 
+NAME = claptrap 
 
 SRC = main.cpp ClapTrap.cpp
 

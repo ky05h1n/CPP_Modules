@@ -6,11 +6,14 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 00:22:37 by enja              #+#    #+#             */
-/*   Updated: 2023/08/17 06:22:53 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/17 10:48:12 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+
+
+
 
 int main()
 {
@@ -18,7 +21,7 @@ int main()
         
     std::string *stringPTR = &string;
 
-    std::string &stringREF = string;
+    std::string &stringREF = *stringPTR;
   
 
   
