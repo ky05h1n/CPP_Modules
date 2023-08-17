@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 00:22:37 by enja              #+#    #+#             */
-/*   Updated: 2023/08/17 00:40:23 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/17 06:00:01 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,12 @@ int main()
   
 
   
+    std::cout << &string << std::endl;
+    std::cout << stringPTR << std::endl;
+    std::cout << stringREF << std::endl;
+    
+    std::cout << "\n\n";
+
     std::cout << string << std::endl;
-
-
-        
-    }   
+    std::cout << string
 }
