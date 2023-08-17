@@ -5,38 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/17 00:22:37 by enja              #+#    #+#             */
-/*   Updated: 2023/08/17 06:22:53 by enja             ###   ########.fr       */
+/*   Created: 2023/08/17 07:03:43 by enja              #+#    #+#             */
+/*   Updated: 2023/08/17 07:23:59 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "ClapTrap.hpp"
+
 
 int main()
 {
-    std::string string = "HI THIS IS BRAIN";
-        
-    std::string *stringPTR = &string;
-
-    std::string &stringREF = string;
-  
-
-  
-    std::cout << &string << std::endl;
-
-    std::cout << stringPTR << std::endl;
-    
-    std::cout << stringREF << std::endl;
-
+    ClapTrap clap("messi");
+    return 0;
 
     
-    std::cout << "\n\n";
-
-
-
-    std::cout << string << std::endl;
-    
-    std::cout << *stringPTR << std::endl;
-    
-    std::cout << stringREF << std::endl;
 }
