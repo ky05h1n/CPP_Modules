@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:01:40 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/11 08:11:52 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/17 11:20:22 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void Contact::storinfo(void)
         std::getline(std::cin, first_name);
         if (first_name.empty() || checkstring(first_name.c_str()))
         {
-            addmsgerror();
+            addmsgerror(0);
             continue;
         }
         first_name = trancword(first_name);
@@ -73,7 +73,7 @@ void Contact::storinfo(void)
         std::getline(std::cin, last_name);
         if (last_name.empty() || checkstring(last_name.c_str()))
         {
-            addmsgerror();
+            addmsgerror(0);
             continue;
         }
         last_name = trancword(last_name);
@@ -87,7 +87,7 @@ void Contact::storinfo(void)
         std::getline(std::cin, nick_name);
         if (nick_name.empty() || checkstring(nick_name.c_str()))
         {
-            addmsgerror();
+            addmsgerror(0);
             continue;
         }
         nick_name = trancword(nick_name);
@@ -98,9 +98,9 @@ void Contact::storinfo(void)
     {
         std::cout << "\nadd your phone number : ";
         std::getline(std::cin, phone_number);
-        if (phone_number.empty() || checkstring(phone_number.c_str()))
+        if (phone_number.empty() || checkstring(phone_number.c_str()) == 0)
         {
-            addmsgerror();
+            addmsgerror(1);
             continue;
         }
         break;
@@ -112,7 +112,7 @@ void Contact::storinfo(void)
         std::getline(std::cin, darkest_secret);    
         if (darkest_secret.empty() || checkstring(darkest_secret.c_str()))
         {
-            addmsgerror();
+            addmsgerror(0);
             continue;
         } 
         break;
@@ -230,13 +230,24 @@ void    Contact::showcontact(void)
     std::cout << std::endl;
 }
 
-void addmsgerror(void)
+void addmsgerror(int sig)
 {
-     std::cout << "\033[2J\033[H";
-     start();
-     std::cout << "\033[1;31mWarning : \033[0m";
-     std::cout <<  "every section should be filled";
-     std::cout << std::endl;
+    if (sig == 0)
+    {   
+        std::cout << "\033[2J\033[H";
+        start();
+        std::cout << "\033[1;31mWarning : \033[0m";
+        std::cout <<  "every section should be filled";
+        std::cout << std::endl;
+     }
+     else
+     {
+        std::cout << "\033[2J\033[H";
+        start();
+        std::cout << "\033[1;31mWarning : \033[0m";
+        std::cout <<  "should be filled and it must contain only numbers";
+        std::cout << std::endl;
+     }
 }
 
 void addmsg(void)
