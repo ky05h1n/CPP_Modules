@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/17 06:25:59 by enja              #+#    #+#              #
-#    Updated: 2023/08/17 06:26:02 by enja             ###   ########.fr        #
+#    Created: 2023/08/18 14:23:27 by ky05h1n           #+#    #+#              #
+#    Updated: 2023/08/18 14:27:21 by ky05h1n          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = harl 
+NAME = fixedpoints 
 
-SRC = Harl.cpp main.cpp
+SRC = Fixed.cpp main.cpp
 
 CC = g++
 
@@ -29,4 +29,4 @@ fclean :
 clean : fclean
 
 
-re : fclean all
+re : fclean all 
