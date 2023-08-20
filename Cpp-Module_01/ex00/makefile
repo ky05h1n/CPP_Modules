@@ -6,7 +6,7 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/12 02:39:09 by enja              #+#    #+#              #
-#    Updated: 2023/08/12 03:13:19 by enja             ###   ########.fr        #
+#    Updated: 2023/08/20 09:23:44 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = zombie
 
 SRC = Zombie.cpp main.cpp newZombie.cpp randomChump.cpp 
 
-CC = g++
+CC = c++
 
 FLAGS = -W -W -W
 

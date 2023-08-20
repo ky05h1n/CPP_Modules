@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/12 02:43:07 by enja              #+#    #+#             */
-/*   Updated: 2023/08/13 02:37:42 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/20 08:37:56 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Zombie{
 
 Zombie*     newZombie(std::string name);
 void        randomChump(std::string name);
-Zombie*    zombieHorde( int N, std::string name);
+Zombie*     zombieHorde( int N, std::string name);
 
 
 #endif

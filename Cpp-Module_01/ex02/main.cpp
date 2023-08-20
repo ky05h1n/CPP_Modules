@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 00:22:37 by enja              #+#    #+#             */
-/*   Updated: 2023/08/17 10:48:12 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/20 08:55:22 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
         
     std::string *stringPTR = &string;
 
-    std::string &stringREF = *stringPTR;
+    std::string &stringREF = string;
   
 
   
@@ -29,7 +29,7 @@ int main()
 
     std::cout << stringPTR << std::endl;
     
-    std::cout << stringREF << std::endl;
+    std::cout << &stringREF << std::endl;
 
 
     
