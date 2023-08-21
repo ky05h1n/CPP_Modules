@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/03 18:03:07 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/19 06:18:27 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/20 17:30:48 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main()
 {
     PhoneBook contactobj;
-    int signal = 0;z
+    int signal = 0;
     int i = 0;
     int j = 0;
     int index;
