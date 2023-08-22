@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:38:49 by enja              #+#    #+#             */
-/*   Updated: 2023/08/17 10:51:21 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/21 17:13:21 by ky05h1n          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void ClapTrap::attack(const std::string& target)
         return ;
     }
     else
-        std::cout << "ClapTrap " << name << " cnt't attack , low energy or hit points" << std::endl;
+        std::cout << "ClapTrap " << name << " cant't attack , low energy or hit points" << std::endl;
     energypoints--;
 }
 
