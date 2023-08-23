@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:31:25 by enja              #+#    #+#             */
-/*   Updated: 2023/08/23 17:29:37 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/23 17:21:33 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 class ClapTrap{
 
-                private :
+                protected :
 
                         std::string     name;
                         unsigned int    hitpoints;
@@ -25,9 +25,9 @@ class ClapTrap{
 						unsigned int	attackdamage;
 
 				public :
-						ClapTrap(std::string _name);
 						ClapTrap();
 						~ClapTrap();
+						ClapTrap(std::string _name);
 						ClapTrap(const ClapTrap& other);
 						ClapTrap& operator=(const ClapTrap& rhs);
 						void attack(const std::string& target);

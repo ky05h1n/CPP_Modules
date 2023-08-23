@@ -6,33 +6,20 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 07:03:43 by enja              #+#    #+#             */
-/*   Updated: 2023/08/23 21:48:18 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/23 21:54:41 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 
 int main() {
-    ClapTrap ahmed;
-    ClapTrap amine("amine");
-    ClapTrap messi("messi");
-    ClapTrap mehdi("mehdi");
 
-    ahmed.attack("Wallo");
-
-    amine.attack("dba3");
-    amine.attack("shakira");
-    amine.attack("neuer");
-    amine.takeDamage(9);
-    amine.beRepaired(10);
+    ScavTrap obj("Jim");
     
-    messi.takeDamage(9);
-    messi.beRepaired(9);
-    messi.attack("Ronaldo");
-    messi.takeDamage(10);
-    
-    mehdi.beRepaired(10);
-    mehdi.takeDamage(19);
+    for (int i = 0; i < 49; i++)
+        obj.attack("he");
+    obj.guardGate();
+    obj.beRepaired(11);
     return 0;
 }

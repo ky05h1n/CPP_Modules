@@ -6,15 +6,19 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:38:49 by enja              #+#    #+#             */
-/*   Updated: 2023/08/23 21:47:06 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/23 21:46:24 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-
 ClapTrap::ClapTrap(){
-    std::cout << "Default Constructor engaged" << std::endl;
+        
+    name = "Unknown";
+    hitpoints = 10;
+    energypoints = 10;
+    attackdamage = 0;
+    std::cout << "ClapTrap Default Constructor engaged" << std::endl;
 };
 
 ClapTrap::ClapTrap(std::string _name)
@@ -23,20 +27,20 @@ ClapTrap::ClapTrap(std::string _name)
     hitpoints = 10;
     energypoints = 10;
     attackdamage = 0;
-    std::cout << "Constractor initialized !" << std::endl;
+    std::cout << "ClapTrap Constractor initialized !" << std::endl;
 }
 
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "Destructor engaged !" << std::endl;
+    std::cout << "ClapTrap Destructor engaged !" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
 {
     if (energypoints > 0 && hitpoints > 0)
     {
-        std::cout << "ClapTrap " << name << " attacks " << target <<  " causing " << attackdamage << " points of damage !"<< std::endl;
+        std::cout << "ClapTrap " << name << " attacks " << target <<  ", causing " << attackdamage << " points of damage !"<< std::endl;
         energypoints--;
         return ;
     }
@@ -54,7 +58,7 @@ void ClapTrap::takeDamage(unsigned int amount)
     else
     {
         hitpoints-= amount;
-        std::cout << "ClapTrap " << name << " Toke " << amount << " points of damage"<< std::endl;  
+        std::cout << "ClapTrap " << name << " Toke " << amount << " points of damage"<< std::endl;        
     }
     
 }
