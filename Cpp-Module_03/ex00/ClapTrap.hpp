@@ -6,14 +6,13 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:31:25 by enja              #+#    #+#             */
-/*   Updated: 2023/08/23 17:29:37 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 11:25:31 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
-#include <string>
 
 class ClapTrap{
 

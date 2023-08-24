@@ -6,16 +6,13 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 09:29:25 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 10:53:33 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 11:26:25 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include "ClapTrap.hpp"
-
-
-
 
 class ScavTrap : public ClapTrap{
 
