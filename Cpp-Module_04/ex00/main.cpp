@@ -6,13 +6,15 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:49:29 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 11:53:40 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 12:10:21 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
+#include "Cat.hpp"
+#include "Dog.hpp"
 
 int main()
 {
-    Animal obj;
+    Cat obj;
 }

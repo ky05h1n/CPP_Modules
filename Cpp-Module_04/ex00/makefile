@@ -6,11 +6,11 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/24 11:21:08 by enja              #+#    #+#              #
-#    Updated: 2023/08/24 11:49:23 by enja             ###   ########.fr        #
+#    Updated: 2023/08/24 12:03:33 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = claptrap 
+NAME = Animal 
 
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp
 
