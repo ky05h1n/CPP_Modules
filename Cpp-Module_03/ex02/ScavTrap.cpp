@@ -6,16 +6,20 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 09:28:41 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 10:52:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 10:59:43 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 
-ScavTrap::ScavTrap():ClapTrap()
+ScavTrap::ScavTrap()
 {
-    std::cout << "ScavTrap Constructor engaged !" << std::endl;
+    name = "Unknown";
+    hitpoints = 100;
+    energypoints = 50;
+    attackdamage = 20;
+    std::cout << "ScavTrap Default Constructor engaged !" << std::endl;
 }
 
  ScavTrap::~ScavTrap()
@@ -23,7 +27,7 @@ ScavTrap::ScavTrap():ClapTrap()
     std::cout << "ScavTrap Destructor engaged !" << std::endl;
  }
 
-ScavTrap::ScavTrap(std::string _name) : ClapTrap(_name)
+ScavTrap::ScavTrap(std::string _name)
 {
     name = _name;
     hitpoints = 100;
