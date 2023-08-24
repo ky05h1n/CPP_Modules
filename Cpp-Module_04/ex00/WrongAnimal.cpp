@@ -1,46 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 11:37:35 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 20:30:17 by ky05h1n          ###   ########.fr       */
+/*   Created: 2023/08/24 20:38:01 by ky05h1n           #+#    #+#             */
+/*   Updated: 2023/08/24 20:40:41 by ky05h1n          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-    std::cout << "Animal Default Consutructor engaged !" << std::endl;
+    std::cout << "WrongAnimal Default Consutructor engaged !" << std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout << "Animal Destructor engaged !" << std::endl;
+    std::cout << "WrongAnimal Destructor engaged !" << std::endl;
 }
 
-Animal::Animal(const Animal& obj)
+WrongAnimal::WrongAnimal(const WrongAnimal& obj)
 {
-    std::cout << "Animal Copy Constructor engaged " << std::endl;
+    std::cout << "WrongAnimal Copy Constructor engaged " << std::endl;
     this->type = obj.type;
 }
 
-Animal& Animal::operator = (const Animal& obj)
+WrongAnimal& WrongAnimal::operator = (const WrongAnimal& obj)
 {
     if (this != &obj)
             this->type = obj.type;
     return *this;
 }
 
-std::string Animal::getType() const
+std::string WrongAnimal::getType() const
 {
     return this->type;
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
     std::cout << "this is virtual" << std::endl;
 }
