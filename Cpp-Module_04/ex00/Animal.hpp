@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:24:14 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 11:25:12 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 11:51:16 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@ class Animal{
 
 
             protected :
+            
+                        std::string type;
 
-                        std::string type;  
+            public :
+                        
+                        Animal();
+                        ~Animal();
+                        Animal(const Animal& obj);
+                        Animal& operator = (const Animal& obj);
+                        
+            
 };

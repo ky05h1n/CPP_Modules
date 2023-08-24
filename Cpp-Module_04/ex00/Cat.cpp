@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 11:49:29 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 11:53:40 by enja             ###   ########.fr       */
+/*   Created: 2023/08/24 11:50:23 by enja              #+#    #+#             */
+/*   Updated: 2023/08/24 11:56:19 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Cat.hpp"
 
-int main()
+Cat::Cat()
 {
-    Animal obj;
+    std::cout << "Cat Default Consutructor engaged !" << std::endl;
 }
+
+Cat::~Cat()
+{
+    std::cout << "Cat Destructor engaged !" << std::endl;
+}
+
+// Cat::Cat(const Cat& obj)
+// {
+//     this->type = obj.type;
+// }
+
+// Cat& Cat::operator = (const Cat& obj)
+// {
+//     if (this != &obj)
+//             this->type = obj.type;
+//     return *this;
+// }

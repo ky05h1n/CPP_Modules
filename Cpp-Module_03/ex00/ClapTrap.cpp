@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:38:49 by enja              #+#    #+#             */
-/*   Updated: 2023/08/23 21:47:06 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/24 11:58:57 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ void ClapTrap::beRepaired(unsigned int amount)
 
 ClapTrap::ClapTrap(const ClapTrap& other)
 {
+    std::cout << name << " ClapTrap Copy Constructor engaged" << std::endl;
     this->name = other.name;
     this->hitpoints = other.hitpoints;
     this->energypoints = other.energypoints;
