@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:37:35 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 18:10:39 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 19:49:03 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,4 @@ Animal& Animal::operator = (const Animal& obj)
 std::string Animal::getType() const
 {
     return this->type;
-}
-
-void Animal::makeSound() const
-{
-    std::cout << "this is virtual" << std::endl;
 }

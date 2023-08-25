@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:49:29 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 18:15:05 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 20:17:45 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,8 @@ int main()
 {
 const Animal* j = new Dog();
 const Animal* i = new Cat();
+
+
 
 delete j;//should not create a leak
 delete i;
