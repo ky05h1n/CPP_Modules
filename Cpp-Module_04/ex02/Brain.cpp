@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 15:13:16 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 17:27:08 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:21:50 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ Brain::~Brain()
 
 Brain::Brain(const Brain& obj)
 {
-    for (int i = 0; i < 100; i++)
-        this->ideas[i] = obj.ideas[i];
+    *this = obj;
+    std::cout << "Brain Copy Constructor engaged !" << std::endl;
 }
 
 const Brain& Brain::operator = (const Brain& obj)

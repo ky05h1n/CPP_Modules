@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 15:13:16 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 17:56:09 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:20:15 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ Brain::~Brain()
 Brain::Brain(const Brain& obj)
 {
     *this = obj;
+    std::cout << "Brain Copy Constructor egaged !" << std::endl;
 }
 
 const Brain& Brain::operator=(const Brain& obj)
