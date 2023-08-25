@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:52:58 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 16:26:40 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:08:54 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ Dog::Dog()
 
 Dog::~Dog()
 {
-    std::cout << "Dog Destructor engaged !" << std::endl;
     delete ptr;
+    std::cout << "Dog Destructor engaged !" << std::endl;
 }
 
 Dog::Dog(const Dog& obj) : Animal(obj)
 {
     std::cout << "Dog Copy Constructor engaged !" << std::endl;
-    this->type = obj.type;
+    *this = obj;
 }
 
 Dog& Dog::operator = (const Dog& obj)

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:50:23 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 16:26:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:08:30 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ Cat::Cat()
 
 Cat::~Cat()
 {
+   delete ptr;
     std::cout << "Cat Destructor engaged !" << std::endl;
-    delete ptr;
 }
 
 Cat::Cat(const Cat& obj) : Animal(obj)
 {
-    this->type = obj.type;
+    *this = obj;
     std::cout << "Cat Copy Constructor engaged !" << std::endl;
 }
 

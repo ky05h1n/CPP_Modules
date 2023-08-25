@@ -6,11 +6,11 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/24 11:21:08 by enja              #+#    #+#              #
-#    Updated: 2023/08/25 17:52:31 by enja             ###   ########.fr        #
+#    Updated: 2023/08/25 15:13:07 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brain 
+NAME = Animal 
 
 SRC = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 

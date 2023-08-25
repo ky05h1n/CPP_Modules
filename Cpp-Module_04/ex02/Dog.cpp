@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:52:58 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 18:05:46 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:11:13 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,12 @@ Dog::Dog()
 {
     std::cout << "Dog Default Consutructor engaged !" << std::endl;
     type = "Dog";
+    ptr = new Brain();
 }
 
 Dog::~Dog()
 {
+    delete ptr;
     std::cout << "Dog Destructor engaged !" << std::endl;
 }
 

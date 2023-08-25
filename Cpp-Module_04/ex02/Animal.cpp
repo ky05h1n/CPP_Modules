@@ -1,42 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 11:52:58 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 18:05:46 by enja             ###   ########.fr       */
+/*   Created: 2023/08/24 11:37:35 by enja              #+#    #+#             */
+/*   Updated: 2023/08/25 18:10:39 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Animal.hpp"
 
-Dog::Dog()
+Animal::Animal()
 {
-    std::cout << "Dog Default Consutructor engaged !" << std::endl;
-    type = "Dog";
+    std::cout << "Animal Default Consutructor engaged !" << std::endl;
 }
 
-Dog::~Dog()
+Animal::~Animal()
 {
-    std::cout << "Dog Destructor engaged !" << std::endl;
+    std::cout << "Animal Destructor engaged !" << std::endl;
 }
 
-Dog::Dog(const Dog& obj) : Animal(obj)
+Animal::Animal(const Animal& obj)
 {
-    std::cout << "Dog Copy Constructor engaged !" << std::endl;
+    std::cout << "Animal Copy Constructor engaged " << std::endl;
     *this = obj;
 }
 
-Dog& Dog::operator = (const Dog& obj)
+Animal& Animal::operator = (const Animal& obj)
 {
     if (this != &obj)
             this->type = obj.type;
     return *this;
 }
 
-void Dog::makeSound() const
+std::string Animal::getType() const
 {
-    std::cout << "Hw Hw !" << std::endl;
+    return this->type;
+}
+
+void Animal::makeSound() const
+{
+    std::cout << "this is virtual" << std::endl;
 }

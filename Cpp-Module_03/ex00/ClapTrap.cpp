@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/17 06:38:49 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 11:58:57 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 10:27:59 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,11 @@
 
 
 ClapTrap::ClapTrap(){
+    
+    name = "Unknown";
+    hitpoints = 10;
+    energypoints = 10;
+    attackdamage = 0;
     std::cout << "Default Constructor engaged" << std::endl;
 };
 

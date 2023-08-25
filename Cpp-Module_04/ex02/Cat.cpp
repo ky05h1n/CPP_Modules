@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/24 11:52:58 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 18:05:46 by enja             ###   ########.fr       */
+/*   Created: 2023/08/24 11:50:23 by enja              #+#    #+#             */
+/*   Updated: 2023/08/25 18:11:01 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog()
+Cat::Cat()
 {
-    std::cout << "Dog Default Consutructor engaged !" << std::endl;
-    type = "Dog";
+    type = "Cat";
+    std::cout << "Cat Default Consutructor engaged !" << std::endl;
+    ptr = new Brain();
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-    std::cout << "Dog Destructor engaged !" << std::endl;
+    delete ptr;
+    std::cout << "Cat Destructor engaged !" << std::endl;
 }
 
-Dog::Dog(const Dog& obj) : Animal(obj)
+Cat::Cat(const Cat& obj) : Animal(obj)
 {
-    std::cout << "Dog Copy Constructor engaged !" << std::endl;
     *this = obj;
+    std::cout << "Cat Copy Constructor engaged !" << std::endl;
 }
 
-Dog& Dog::operator = (const Dog& obj)
+Cat& Cat::operator = (const Cat& obj)
 {
     if (this != &obj)
             this->type = obj.type;
     return *this;
 }
 
-void Dog::makeSound() const
+void Cat::makeSound() const
 {
-    std::cout << "Hw Hw !" << std::endl;
+    std::cout  << "mew" << std::endl;
 }

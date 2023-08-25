@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 20:38:27 by ky05h1n           #+#    #+#             */
-/*   Updated: 2023/08/24 20:45:34 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/25 18:09:11 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ WrongCat::~WrongCat()
 
 WrongCat::WrongCat(const WrongCat& obj) : WrongAnimal(obj)
 {
-    this->type = obj.type;
+    *this = obj;
     std::cout << "WrongCat Copy Constructor engaged !" << std::endl;
 }
 

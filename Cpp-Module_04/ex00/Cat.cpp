@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:50:23 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 20:34:52 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/25 18:05:34 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Cat::~Cat()
 
 Cat::Cat(const Cat& obj) : Animal(obj)
 {
-    this->type = obj.type;
+    *this = obj;
     std::cout << "Cat Copy Constructor engaged !" << std::endl;
 }
 

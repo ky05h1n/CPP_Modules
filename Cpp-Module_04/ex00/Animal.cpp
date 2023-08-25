@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:37:35 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 20:30:17 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/25 18:04:50 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Animal::~Animal()
 Animal::Animal(const Animal& obj)
 {
     std::cout << "Animal Copy Constructor engaged " << std::endl;
-    this->type = obj.type;
+    *this = obj;
 }
 
 Animal& Animal::operator = (const Animal& obj)

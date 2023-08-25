@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/24 11:49:29 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 16:28:47 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/25 18:15:05 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,37 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
+// int main()
+// {
+
+//     Animal* arr[4];
+
+//     for (int i = 0; i < 2 ; i++)
+//         arr[i] = new Cat;
+
+//     std::cout << std::endl;
+    
+//     for (int i = 2; i < 4; i++)
+//         arr[i] = new Dog;
+
+//     std::cout << std::endl;
+
+//     for (int i = 0; i < 2; i++)
+//         delete arr[i];
+
+//     std::cout << std::endl;
+
+//     for (int i = 2; i < 4; i++)
+//         delete arr[i];
+//     return 0;
+// }
+
 int main()
 {
+const Animal* j = new Dog();
+const Animal* i = new Cat();
 
-    
-    return 0;
+delete j;//should not create a leak
+delete i;
+
 }
