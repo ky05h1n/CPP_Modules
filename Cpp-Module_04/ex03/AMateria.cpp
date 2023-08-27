@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 20:24:43 by enja              #+#    #+#             */
-/*   Updated: 2023/08/25 21:28:01 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/26 21:02:13 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 AMateria::AMateria()
 {
-    std::cout << "AMateria Destructor egaged !" << std::endl;
+    std::cout << "AMateria Constructor egaged !" << std::endl;
 }
 
 AMateria::~AMateria()
@@ -33,4 +33,20 @@ const AMateria& AMateria::operator=(const AMateria& obj)
     if (this != &obj)
         this->type = obj.type;
     return *this;
+}
+
+AMateria::AMateria(std::string const &_type):type(_type)
+{
+    
+}
+
+std::string const &AMateria::getType() const
+{
+    return this->type;
+}
+
+void AMateria::use(ICharacter &target)
+{
+    (void)target;
+    std::cout << "amateria default base" << std::endl;
 }
