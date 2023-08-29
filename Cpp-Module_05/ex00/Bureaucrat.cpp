@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/08/28 18:58:05 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/29 23:14:22 by ky05h1n          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,22 @@
 
 Bureaucrat::Bureaucrat()
 {
-    std::cout << "Bureaucrat Constructor !" << std::endl;
+    std::cout << "Default Bureaucrat Constructor !" << std::endl;
 }
+
+Bureaucrat::Bureaucrat(std::string& name, int grade) : name(name)
+{
+    //std::cout << "Bureaucrat Constructor !" << std::endl;
+    if (grade < 1)
+        throw GradeTooHighException();
+    else if (grade > 150)
+        throw GradeTooLowException();
+    else
+    {
+        this->grade = grade;
+    }
+}
+
 
 Bureaucrat::~Bureaucrat()
 {
@@ -46,10 +60,20 @@ std::string Bureaucrat::getName()
 
 void    Bureaucrat::inGrade()
 {
-    grade++;
+    if (grade > 1)
+        grade--;
+    else throw GradeTooHighException();
 }
 
 void    Bureaucrat::decGrade()
 {
-    
+    if (grade < 150)
+        grade++;
+    else throw GradeTooLowException();
+}
+
+std::ostream& operator << (std::ostream& out , Bureaucrat& obj)
+{
+   out << obj.getName() << ", bureaucrat grade " << obj.getGrade();
+    return out;   
 }

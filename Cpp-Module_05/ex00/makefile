@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
+#    By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/27 16:35:18 by enja              #+#    #+#              #
-#    Updated: 2023/08/27 16:40:42 by enja             ###   ########.fr        #
+#    Updated: 2023/08/29 22:46:47 by ky05h1n          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 
 SRC = main.cpp Bureaucrat.cpp
 
-FLAGS = 
+FLAGS = -Wall -Wextra -Werror
 
 CC = c++
 
