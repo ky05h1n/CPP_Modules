@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/22 09:28:41 by enja              #+#    #+#             */
-/*   Updated: 2023/08/24 10:52:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/08/27 13:55:58 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 ScavTrap::ScavTrap():ClapTrap()
 {
     std::cout << "ScavTrap Constructor engaged !" << std::endl;
+    ScavTrap* ptr = new ScavTrap;
+    ptr->name = "safas";
 }
 
  ScavTrap::~ScavTrap()
