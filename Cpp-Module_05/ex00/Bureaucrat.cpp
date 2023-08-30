@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ky05h1n <ky05h1n@student.42.fr>            +#+  +:+       +#+        */
+/*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/08/29 23:14:22 by ky05h1n          ###   ########.fr       */
+/*   Updated: 2023/08/30 11:28:53 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ Bureaucrat::Bureaucrat()
     std::cout << "Default Bureaucrat Constructor !" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string& name, int grade) : name(name)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
 {
-    //std::cout << "Bureaucrat Constructor !" << std::endl;
+    std::cout << "Bureaucrat Constructor !" << std::endl;
     if (grade < 1)
         throw GradeTooHighException();
     else if (grade > 150)
