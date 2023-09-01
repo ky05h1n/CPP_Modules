@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 16:41:59 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:43:56 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 20:29:16 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ class Bureaucrat{
                         void decGrade();
                         void inGrade();
                         void signForm(AForm& form);
+                        void executeForm(AForm const & form);
 
 };
 

@@ -6,30 +6,34 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 16:41:50 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:53:34 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:23:47 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
 
      try{
 
-        // Bureaucrat obj("Lhaj", 4);
-        // AForm obj1("1337", 10, 40);
-        // obj.signForm(obj1);
+        Bureaucrat B("kyoshin",12);
+        ShrubberyCreationForm S("test");
+        S.beSigned(B);
+        B.executeForm(S);
     }
-    catch (Bureaucrat::GradeTooHighException& e)
+    catch (std::exception & e)
     {
-        std::cout << "Exeption: Grade too high" << std::endl;
+        std::cout << e.what() << std::endl;
         return (EXIT_FAILURE);
     }
-    catch (Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout << "Exeption: Grade too low" << std::endl;
-        return (EXIT_FAILURE);
-    }
+    // catch (Bureaucrat::GradeTooLowException& e)
+    // {
+    //     std::cout << "Exeption: Grade too low" << std::endl;
+    //     return (EXIT_FAILURE);
+    // }
 }

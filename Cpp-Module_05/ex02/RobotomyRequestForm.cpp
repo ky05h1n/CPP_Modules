@@ -6,11 +6,17 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 16:03:07 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:41:41 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:03:15 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("RobotomyRequest", 72, 45) , target(target)
+{
+    
+    //std::cout << "PresidentialPardonForm Constructor" << std::endl;
+}
 
 RobotomyRequestForm::RobotomyRequestForm()
 {
@@ -26,7 +32,7 @@ RobotomyRequestForm::~RobotomyRequestForm()
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj) : AForm(obj)
 {
     *this = obj;
-    std::cout << "RobotomyRequestForm Copy Constructor" << std::endl;
+    //std::cout << "RobotomyRequestForm Copy Constructor" << std::endl;
 }
 
 const RobotomyRequestForm& RobotomyRequestForm::operator = (const RobotomyRequestForm& obj)
@@ -36,10 +42,19 @@ const RobotomyRequestForm& RobotomyRequestForm::operator = (const RobotomyReques
     return *this;
 }
 
-void RobotomyRequestForm::execute(Bureaucrat const & executor)
+void RobotomyRequestForm::execute(Bureaucrat const & executor)const
 {
-     if (this->getSig() == true && executor.getGrade())
+    if (this->getSig() == true && executor.getGrade() >= this->getGradeExecute())
     {
-        std::cout << "blabla" << std::endl;
+        if (rand() % 2 == 0) 
+        {
+            std::cout << target << " Robotomy of " << " has been robotomized successfully 50% of the time" << std::endl;
+        } 
+        else 
+        {
+            std::cout << target << " the robotomy failed!" << std::endl;
+        }
     }
+    else
+        throw AForm::GradeTooLowException();
 }

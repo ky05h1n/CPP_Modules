@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:20:06 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 20:34:41 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,17 @@ void Bureaucrat::signForm(AForm& form)
     else
     {
         std::cout << name << " couldn’t sign " << form.getName() << " because the grade does not match the requierment" << std::endl;
+    }
+}
+
+void Bureaucrat::executeForm(AForm const & form)
+{
+    try {
+        
+        form.execute(*this);
+    }
+    catch (GradeTooLowException& e)
+    {
+        std::cout << e.what() << std::endl;
     }
 }

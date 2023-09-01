@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 15:13:19 by enja              #+#    #+#             */
-/*   Updated: 2023/08/31 16:28:58 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:03:09 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ class RobotomyRequestForm : public AForm{
                         RobotomyRequestForm(const RobotomyRequestForm& obj);
                         const RobotomyRequestForm& operator = (const RobotomyRequestForm& obj);
 
-                        void    execute(Bureaucrat const & executor);
+                        void    execute(Bureaucrat const & executor) const;
 };

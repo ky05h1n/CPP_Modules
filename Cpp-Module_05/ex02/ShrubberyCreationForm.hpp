@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 15:05:39 by enja              #+#    #+#             */
-/*   Updated: 2023/08/31 16:29:23 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:03:25 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ class ShrubberyCreationForm : public AForm{
                         ShrubberyCreationForm(const ShrubberyCreationForm& obj);
                         const ShrubberyCreationForm& operator = (const ShrubberyCreationForm& obj);
 
-                        void    execute(Bureaucrat const & executor);
+                        void    execute(Bureaucrat const & executor)const;
 };

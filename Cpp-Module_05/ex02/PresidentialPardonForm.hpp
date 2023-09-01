@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 15:12:39 by enja              #+#    #+#             */
-/*   Updated: 2023/08/31 20:05:01 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:02:03 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include "Bureaucrat.hpp"
 
 class PresidentialPardonForm : public AForm{
-
 
                 private:
 
@@ -31,5 +30,5 @@ class PresidentialPardonForm : public AForm{
                         PresidentialPardonForm(const PresidentialPardonForm& obj);
                         const PresidentialPardonForm& operator = (const PresidentialPardonForm& obj);
 
-                        void    execute(Bureaucrat const & executor);
+                        void    execute(Bureaucrat const & executor)const;
 };

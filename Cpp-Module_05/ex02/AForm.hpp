@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 17:05:58 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:59:09 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:24:12 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #pragma once
 
 #include <iostream>
+#include <fstream>
 
 class Bureaucrat;
 class AForm {
@@ -39,11 +40,11 @@ class AForm {
                         std::string getName();
                         int getGradeSign() const;
                         int getGradeExecute() const;
-                        bool      getSig();
+                        bool      getSig()const;
                         void      signForm();
                         void      beSigned(Bureaucrat& Bcrat);                       
 
-                        virtual    void execute(Bureaucrat const & executor) = 0;
+                        virtual    void execute(Bureaucrat const & executor) const = 0;
 };
 
 #include "Bureaucrat.hpp"

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:50:34 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 16:18:18 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 21:19:02 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
     this->sig = false;
     if (_gradeRequired < 0 || _gradeSign < 0)
         throw Bureaucrat::GradeTooLowException();
-    else if (_gradeRequired > 150 || _gradeSign > 50)
+    else if (_gradeRequired > 150 || _gradeSign > 150)
         throw Bureaucrat::GradeTooHighException();
  }
 
@@ -73,7 +73,7 @@ void    AForm::beSigned(Bureaucrat& Bcrat)
         throw AForm::GradeTooLowException();
 }
 
-bool AForm::getSig()
+bool AForm::getSig()const
 {
     return sig;
 }
