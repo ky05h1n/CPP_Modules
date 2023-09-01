@@ -6,14 +6,14 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 16:41:59 by enja              #+#    #+#             */
-/*   Updated: 2023/08/30 16:34:41 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 16:43:56 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once 
 
 #include <iostream>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class Bureaucrat{
 
@@ -33,10 +33,10 @@ class Bureaucrat{
                         Bureaucrat(const Bureaucrat& obj);
                         const Bureaucrat& operator = (const Bureaucrat& obj);
                         std::string getName();
-                        int getGrade();
+                        int getGrade() const;
                         void decGrade();
                         void inGrade();
-                        void signForm(Form& form);
+                        void signForm(AForm& form);
 
 };
 

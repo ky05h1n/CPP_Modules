@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:39:48 by enja              #+#    #+#             */
-/*   Updated: 2023/08/30 16:51:29 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 16:05:13 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,14 @@ class Form {
                         ~Form();
                         Form(const Form& obj);
                         const Form& operator = (const Form& obj);
+
+                        class GradeTooLowException : public std::exception {
+                                const char* what() const throw();
+                        };
                         
-                        class GradeTooHighException : public std::exception {};
-                        class GradeTooLowException : public std::exception {};
-                        Form(std::string name,const int gradeSign, const int gradeRequired);
+                        Form(std::string _name, const int _gradeSign);
                         std::string getName();
                         int getGradeSign() const;
-                        int getGradeExecute() const;
                         bool      getSig();
                         void      signForm();
                         void      beSigned(Bureaucrat& Bcrat);

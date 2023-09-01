@@ -6,12 +6,12 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/08/30 16:57:02 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 16:20:06 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat()
 {
@@ -49,7 +49,7 @@ const Bureaucrat& Bureaucrat::operator = (const Bureaucrat& obj)
     return *this;
 }
 
-int Bureaucrat::getGrade()
+int Bureaucrat::getGrade() const
 {
     return grade;
 }
@@ -79,7 +79,7 @@ std::ostream& operator << (std::ostream& out , Bureaucrat& obj)
     return out;   
 }
 
-void Bureaucrat::signForm(Form& form)
+void Bureaucrat::signForm(AForm& form)
 {
     if (grade <= form.getGradeExecute() && form.getSig() == true)
         std::cout << name << " signed " << form.getName() << std::endl;

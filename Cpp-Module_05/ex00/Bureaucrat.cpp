@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/08/30 11:28:53 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 11:05:14 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,7 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : name(name)
         throw GradeTooHighException();
     else if (grade > 150)
         throw GradeTooLowException();
-    else
-    {
-        this->grade = grade;
-    }
+    this->grade = grade;
 }
 
 
@@ -75,5 +72,5 @@ void    Bureaucrat::decGrade()
 std::ostream& operator << (std::ostream& out , Bureaucrat& obj)
 {
    out << obj.getName() << ", bureaucrat grade " << obj.getGrade();
-    return out;   
+    return out;
 }

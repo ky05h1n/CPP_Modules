@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 18:22:02 by enja              #+#    #+#             */
-/*   Updated: 2023/08/30 16:57:02 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/01 15:28:16 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,10 +81,16 @@ std::ostream& operator << (std::ostream& out , Bureaucrat& obj)
 
 void Bureaucrat::signForm(Form& form)
 {
-    if (grade <= form.getGradeExecute() && form.getSig() == true)
-        std::cout << name << " signed " << form.getName() << std::endl;
-    else
-    {
-        std::cout << name << " couldn’t sign " << form.getName() << " because the grade does not match the requierment" << std::endl;
+    try {
+        
+        form.beSigned(*this);
     }
+    
+    catch (std::exception& e)
+    {
+        std::cout << name << " couldn’t sign " << form.getName() << " because "<< e.what() << std::endl;
+        return ;
+    }
+    
+    std::cout << name << " signed " << form.getName() << std::endl;
 }
