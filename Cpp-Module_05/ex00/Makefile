@@ -6,7 +6,7 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/08/30 11:17:42 by enja              #+#    #+#              #
-#    Updated: 2023/08/30 11:29:49 by enja             ###   ########.fr        #
+#    Updated: 2023/09/02 14:45:17 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 
 SRC = main.cpp Bureaucrat.cpp
 
-CC = g++
+CC = c++
 
 FLAGS = -Wall -Wextra -Werror
 
