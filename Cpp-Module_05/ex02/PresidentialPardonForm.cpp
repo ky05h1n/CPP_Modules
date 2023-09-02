@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 14:58:17 by enja              #+#    #+#             */
-/*   Updated: 2023/09/02 14:37:53 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/02 17:04:10 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm& obj
 const PresidentialPardonForm& PresidentialPardonForm::operator = (const PresidentialPardonForm& obj)
 {
     if (this != &obj)
-        *this = obj;
+        this->target = obj.target;;
     return *this;
 }
 

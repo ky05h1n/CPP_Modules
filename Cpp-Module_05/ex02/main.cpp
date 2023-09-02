@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 16:41:50 by enja              #+#    #+#             */
-/*   Updated: 2023/09/02 14:38:07 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/02 17:09:02 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,23 +23,31 @@ int main()
 
         Bureaucrat B("kyoshin",1);
         ShrubberyCreationForm S("test");
-        RobotomyRequestForm R("bot");
-        PresidentialPardonForm  A("AL");
-        AForm *n;
-        (void)n;
-        n  = new ShrubberyCreationForm("omar");
-        
-        A.beSigned(B);
-        B.signForm(A);
-        B.executeForm(A);
+        ShrubberyCreationForm S1;
 
-        n->beSigned(B);
-        B.signForm(*n);
-        n = new RobotomyRequestForm("lmakina");
-        n->beSigned(B);
-        n->execute(B);
-        n->execute(B);
-        n->execute(B);
+        S1 = S;
+        
+        // S1.beSigned(B);
+        B.signForm(S1);
+        // RobotomyRequestForm R("bot");
+        // PresidentialPardonForm  A("AL");
+        // AForm *n;
+        // (void)n;
+        // n  = new ShrubberyCreationForm("omar");
+        
+        // A.beSigned(B);
+        // B.signForm(A);
+        // B.executeForm(A);
+
+        // n->beSigned(B);
+        // B.signForm(*n);
+        // n = new RobotomyRequestForm("lmakina");
+        // n->beSigned(B);
+        // n->execute(B);
+        // n->execute(B);
+        // n->execute(B);
+
+        // delete n;
     }
     catch (std::exception & e)
     {

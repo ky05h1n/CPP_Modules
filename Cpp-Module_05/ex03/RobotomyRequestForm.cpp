@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 16:03:07 by enja              #+#    #+#             */
-/*   Updated: 2023/09/02 14:15:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/02 17:04:36 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& obj) : AForm
 const RobotomyRequestForm& RobotomyRequestForm::operator = (const RobotomyRequestForm& obj)
 {
     if (this != &obj)
-        *this = obj;
+        this->target = obj.target;
     return *this;
 }
 

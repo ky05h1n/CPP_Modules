@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/31 16:04:34 by enja              #+#    #+#             */
-/*   Updated: 2023/09/02 14:31:41 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/02 17:06:28 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& obj) :
 const ShrubberyCreationForm& ShrubberyCreationForm::operator = (const ShrubberyCreationForm& obj)
 {
     if (this != &obj)
-        *this = obj;
+        this->target = obj.target;
     return *this;
 }
 
