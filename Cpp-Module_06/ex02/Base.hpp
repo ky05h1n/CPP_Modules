@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 18:51:55 by enja              #+#    #+#             */
-/*   Updated: 2023/09/04 20:26:59 by enja             ###   ########.fr       */
+/*   Created: 2023/09/05 16:49:27 by enja              #+#    #+#             */
+/*   Updated: 2023/09/06 12:13:20 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <iostream>
+#include <cstdlib>
 
-class ScalarConverter {
 
-                public :
-                                    
-                        ScalarConverter();
-                        ~ScalarConverter();
-                        ScalarConverter(const ScalarConverter& obj);
-                        ScalarConverter& operator = (const ScalarConverter& obj);
+class Base{
 
-                        void    convert(std::string convert);
+            public:
+
+                    virtual ~Base();
 };
+
+void identify(Base* p);
+Base * generate(void);
+void identify(Base& p);

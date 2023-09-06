@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/01 18:46:50 by enja              #+#    #+#              #
-#    Updated: 2023/09/04 16:08:31 by enja             ###   ########.fr        #
+#    Created: 2023/09/05 14:21:40 by enja              #+#    #+#              #
+#    Updated: 2023/09/05 15:09:22 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = Serialization
 
-SRC = main.cpp ScalarConverter.cpp 
+SRC = main.cpp Serializer.cpp
 
 CC = g++
 
