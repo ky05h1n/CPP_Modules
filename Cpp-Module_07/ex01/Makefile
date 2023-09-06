@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/06 15:14:03 by enja              #+#    #+#              #
-#    Updated: 2023/09/06 15:14:04 by enja             ###   ########.fr        #
+#    Created: 2023/09/06 16:49:55 by enja              #+#    #+#              #
+#    Updated: 2023/09/06 16:50:07 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = identify
+NAME = templat
 
-SRC = main.cpp Base.cpp
+SRC = main.cpp 
 
 CC = g++
 

@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/06 15:14:03 by enja              #+#    #+#              #
-#    Updated: 2023/09/06 15:14:04 by enja             ###   ########.fr        #
+#    Created: 2023/09/06 17:09:34 by enja              #+#    #+#              #
+#    Updated: 2023/09/06 17:25:05 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = identify
+NAME = Array
 
-SRC = main.cpp Base.cpp
+SRC = main.cpp Array.cpp
 
 CC = g++
 
