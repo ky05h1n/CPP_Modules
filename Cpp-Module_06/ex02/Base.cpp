@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:51:56 by enja              #+#    #+#             */
-/*   Updated: 2023/09/06 12:50:25 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/06 13:00:03 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,19 @@ Base::~Base()
 Base * generate(void)
 {
     Base *ptr;
+    static int i = 100000;
 
     srand(time(0));
 
-    if (rand() % 3 == 0)
+    if ((rand() + i) % 3 == 0)
         ptr = new A;
-    else if (rand() % 3 == 1)
+    else if ((rand() + i) % 3 == 0)
         ptr = new B;
     else
         ptr = new C;
+    if (!ptr)
+        exit(EXIT_FAILURE);
+    i += 100000;
     return ptr;
 }
 
