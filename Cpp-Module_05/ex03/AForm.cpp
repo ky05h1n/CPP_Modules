@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:50:34 by enja              #+#    #+#             */
-/*   Updated: 2023/09/01 21:19:02 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/08 11:41:36 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,5 @@ bool AForm::getSig()const
 
 const char* AForm::GradeTooLowException::what() const throw()
 {
-    return "Exeception : GradeTooLowException";
+    return "Exeception : GradeTooLowExceptionggg";
 }

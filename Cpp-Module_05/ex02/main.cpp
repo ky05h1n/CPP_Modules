@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/27 16:41:50 by enja              #+#    #+#             */
-/*   Updated: 2023/09/02 17:09:02 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/08 11:39:23 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,15 @@ int main()
 
      try{
 
-        Bureaucrat B("kyoshin",1);
+        Bureaucrat B("kyoshin",150);
         ShrubberyCreationForm S("test");
         ShrubberyCreationForm S1;
 
         S1 = S;
         
-        // S1.beSigned(B);
-        B.signForm(S1);
+         //S1.beSigned(B);
+         B.signForm(S1);
+        // B.executeForm(S1);
         // RobotomyRequestForm R("bot");
         // PresidentialPardonForm  A("AL");
         // AForm *n;

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:17:54 by enja              #+#    #+#             */
-/*   Updated: 2023/09/06 19:17:55 by enja             ###   ########.fr       */
+/*   Updated: 2023/09/08 13:56:25 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,13 @@
 template<class T>
 Array<T>::Array(unsigned int n)
 {
-    array[n];
+    len = n;
     std::cout << "Array Constructor" << std::endl;
 }
 
 template<class T>
 Array<T>::Array()
 {
-     array[];
     std::cout << "Array Constructor" << std::endl;
 }
 
@@ -41,5 +40,7 @@ Array<T>::Array(const Array& obj)
 template<class T>
 const Array<T>& Array<T>::operator = (const Array& obj)
 {
-    
+    for(int i = 0; i < len; i++)
+        this->array[i] = obj.array[i];
 }
+
