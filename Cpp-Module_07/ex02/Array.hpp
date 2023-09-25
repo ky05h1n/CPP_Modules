@@ -19,8 +19,8 @@ class Array{
                 
                 private:
                         
-                        int len;
-                        T array[len];
+                        unsigned int len;
+                        T *Arrtype;
                 public :
 
                     Array();
@@ -29,4 +29,5 @@ class Array{
                     const Array& operator = (const Array& obj);
                 
                     Array(unsigned int n);
+                    size();
 };

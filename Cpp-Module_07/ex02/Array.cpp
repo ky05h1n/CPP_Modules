@@ -16,19 +16,22 @@ template<class T>
 Array<T>::Array(unsigned int n)
 {
     len = n;
-    std::cout << "Array Constructor" << std::endl;
+    //std::cout << "Array Constructor" << std::endl;
 }
 
 template<class T>
 Array<T>::Array()
 {
-    std::cout << "Array Constructor" << std::endl;
+    len = 0;
+    Arrtype = new T[0];
+    //std::cout << "Array Constructor" << std::endl;
 }
 
 template<class T>
 Array<T>::~Array()
 {
-    std::cout << "Array Destructor" << std::endl;
+    delete [] Arrtype;
+    //std::cout << "Array Destructor" << std::endl;
 }
 
 template<class T>
@@ -40,7 +43,16 @@ Array<T>::Array(const Array& obj)
 template<class T>
 const Array<T>& Array<T>::operator = (const Array& obj)
 {
-    for(int i = 0; i < len; i++)
-        this->array[i] = obj.array[i];
+   this->len = obj.len;
+    this->Arrtype = new T[obj.len];
+    for(int i = 0; i < int(obj.len); i++)
+        this->Arrtype[i] =obj.Arrtype[i];
+    return *this;
+}
+
+template<class T>
+int Array<T>::size()
+{
+    return len;
 }
 
