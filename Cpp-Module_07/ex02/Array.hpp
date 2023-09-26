@@ -12,8 +12,8 @@
 
 #pragma once
 
-#include <iostream>
 
+#include <iostream>
 template<class T>
 class Array{
                 
@@ -29,5 +29,6 @@ class Array{
                     const Array& operator = (const Array& obj);
                 
                     Array(unsigned int n);
-                    size();
+                    T& operator [](int n);
+                    int size();
 };
