@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/01 10:24:29 by enja              #+#    #+#             */
-/*   Updated: 2023/10/01 11:29:07 by enja             ###   ########.fr       */
+/*   Created: 2023/10/01 10:24:27 by enja              #+#    #+#             */
+/*   Updated: 2023/10/01 11:32:51 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once 
+#include "easyfind.hpp"
 
-#include <iostream>
-#include <vector>
-#include <algorithm>
-
-
-template <typename T>
-bool easyfind(T container, int i)
+int main()
 {
-    return (std::find(container.begin(), container.end(), i) != container.end());
+    std::vector<int> a;
+
+    for(int i = 0; i <= 10; i++)
+        a.push_back(i);
+
+
+    std::cout << easyfind(a, 4) << std::endl;
+    
+    std::cout << easyfind(a, -1) << std::endl;
+
+    std::cout << easyfind(a, 100) << std::endl;
+
+    std::cout << easyfind(a, 10) << std::endl;
 }
