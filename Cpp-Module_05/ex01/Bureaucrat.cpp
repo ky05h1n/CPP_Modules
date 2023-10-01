@@ -37,7 +37,7 @@ Bureaucrat::~Bureaucrat()
     //std::cout << "Bureaucrat Destructor !" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& obj)
+Bureaucrat::Bureaucrat(const Bureaucrat& obj)  : name(obj.name)
 {
     *this = obj;
 }

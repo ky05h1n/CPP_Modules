@@ -66,7 +66,7 @@ int main(int ac , char **av)
                                 break;
                             line.erase(pos, str.size());
                             line.insert(pos,av[3],str2.size());
-                            lastpos = pos + str2.size();
+                            //lastpos = pos + str2.size();
                     }
                     std::ofstream appendfile("newfile.replace", std::ios::app);
                     appendfile << line << std::endl;

@@ -12,10 +12,8 @@
 
 #include "Array.hpp"
 
-
 #define MAX_VAL 750
 
-template class Array<int>;
 int main(int, char**)
 {
 
@@ -64,5 +62,6 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
+
     return 0;
 }

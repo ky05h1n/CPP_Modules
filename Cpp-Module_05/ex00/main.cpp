@@ -17,6 +17,11 @@ int main()
     try{
 
         Bureaucrat obj("Lhaj", 150);
+
+
+        Bureaucrat neboj = obj;
+
+        std::cout << "|" << neboj << std::endl;
         std::cout << obj << std::endl;
         std::cout << obj.getGrade() << std::endl;
         std::cout << obj.getName() << std::endl;
