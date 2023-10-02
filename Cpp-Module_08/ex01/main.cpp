@@ -6,38 +6,68 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:36:51 by enja              #+#    #+#             */
-/*   Updated: 2023/10/02 10:18:12 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/02 11:11:31 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 int main()
-{       
-    Span test(2);
-    try{
-        
-        test.addNumber(0);
+{
+    Span sp = Span(5);
 
-        std::cout << test.shortestSpan() << std::endl;
-        std::cout << test.longestSpan() << std::endl;
-    }
-    
-    // Span test(2);
-    // try{
-        
-    //     test.addNumber(0);
-    //     test.addNumber(0);
-    //     test.addNumber(0);
+    sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
 
-    //     std::cout << test.shortestSpan() << std::endl;
-    //     std::cout << test.longestSpan() << std::endl;
-    // }
-    catch(std::exception &e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    std::cout << sp.shortestSpan() << std::endl;
+    std::cout << sp.longestSpan() << std::endl;
+
+    return 0;
 }
+
+// the multinum function
+// int main()
+// {
+//     Span sp = Span(5);
+    
+//     int arr[] = {6,3,17,9, 11};
+
+//     sp.addMultiNumber(&arr[0], &arr[4]);
+
+//     std::cout << sp.shortestSpan() << std::endl;
+//     std::cout << sp.longestSpan() << std::endl;
+    
+// }
+
+// int main()
+// {       
+//     Span test(2);
+//     try{
+        
+//         test.addNumber(0);
+
+//         std::cout << test.shortestSpan() << std::endl;
+//         std::cout << test.longestSpan() << std::endl;
+//     }
+    
+//     // Span test(2);
+//     // try{
+        
+//     //     test.addNumber(0);
+//     //     test.addNumber(0);
+//     //     test.addNumber(0);
+
+//     //     std::cout << test.shortestSpan() << std::endl;
+//     //     std::cout << test.longestSpan() << std::endl;
+//     // }
+//     catch(std::exception &e)
+//     {
+//         std::cout << e.what() << std::endl;
+//     }
+// }
 
 // int main()
 // {

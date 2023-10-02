@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:46:05 by enja              #+#    #+#             */
-/*   Updated: 2023/10/02 10:14:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/02 11:10:00 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,11 @@ int    Span::longestSpan()
             min = span;
     }
     return min;
+}
+
+void	Span::addMultiNumber(int *first, int *last)
+{
+    vec.insert(vec.begin(), first, last+1);
 }
 
 const char * Span::FilledException::what() const throw()
