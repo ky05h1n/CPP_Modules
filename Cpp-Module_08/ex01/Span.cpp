@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:46:05 by enja              #+#    #+#             */
-/*   Updated: 2023/10/01 11:57:23 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/02 10:11:06 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Span::Span(unsigned int n)
 {
     std::cout << "Constructor" << std::endl;
-    vec.push_back(n);
+    size = n;
 }
 
 Span::Span()
@@ -44,7 +44,54 @@ const Span& Span::operator = (const Span& obj)
     return *this;
 }
 
-void    Span::addNumber(unsigned int n)
+void    Span::addNumber(int n)
 {
-    vec.push_back(n);
+    if (vec.size() < size)
+        vec.push_back(n);
+    else
+        throw FilledException();
+}
+
+int    Span::shortestSpan()
+{
+    if (vec.size() <= 1)
+        throw NoSpanException();
+    
+    int span;
+    int min = MAX_INT;
+    sort(vec.begin(), vec.end());
+
+    for (int i = 1; i < (int)vec.size(); i++)
+    {
+        span = vec[i] - vec[i - 1];
+        if (span < min)
+            min = span;
+    }
+    return min;
+}
+
+int    Span::longestSpan()
+{
+    if (vec.size() <= 1)
+        throw NoSpanException();
+    sort(vec.begin(), vec.end());
+    int min = 0;
+
+    for(int i = 1; i < (int)vec.size(); i++)
+    {
+        int span = vec[i] - vec[0];
+        if (span > min)
+            min = span;
+    }
+    return min;
+}
+
+const char * Span::FilledException::what() const throw()
+{
+    return "Exception: Container Size exceeded";
+}
+
+const char * Span::NoSpanException::what() const throw()
+{
+    return "Exception: No span can be found";
 }
