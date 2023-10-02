@@ -6,44 +6,71 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:36:51 by enja              #+#    #+#             */
-/*   Updated: 2023/10/02 10:06:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/02 10:18:12 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 int main()
-{
-    Span test(0);
-
+{       
+    Span test(2);
     try{
+        
         test.addNumber(0);
-        test.addNumber(4);
-        test.addNumber(5);
-        test.addNumber(10);
-        test.addNumber(16);
+
         std::cout << test.shortestSpan() << std::endl;
         std::cout << test.longestSpan() << std::endl;
     }
+    
+    // Span test(2);
     // try{
-    //         test.addNumber(12);
-    //         test.addNumber(98);
-    //         test.addNumber(45);
-    //         test.addNumber(91);
-    //         test.addNumber(26);
-    //         test.addNumber(78);
-    //         test.addNumber(30);
-    //         test.addNumber(40);
-    //         test.addNumber(16);
-    //         test.addNumber(500);
-    //         std::cout << test.shortestSpan() << std::endl;
-    //         std::cout << test.longestSpan() << std::endl;            
+        
+    //     test.addNumber(0);
+    //     test.addNumber(0);
+    //     test.addNumber(0);
+
+    //     std::cout << test.shortestSpan() << std::endl;
+    //     std::cout << test.longestSpan() << std::endl;
     // }
     catch(std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }
 }
+
+// int main()
+// {
+//     Span test(5);
+
+//     try{
+//         test.addNumber(0);
+//         test.addNumber(4);
+//         test.addNumber(5);
+//         test.addNumber(10);
+//         test.addNumber(16);
+//         std::cout << test.shortestSpan() << std::endl;
+//         std::cout << test.longestSpan() << std::endl;
+//     }
+//     // try{
+//     //         test.addNumber(12);
+//     //         test.addNumber(98);
+//     //         test.addNumber(45);
+//     //         test.addNumber(91);
+//     //         test.addNumber(26);
+//     //         test.addNumber(78);
+//     //         test.addNumber(30);
+//     //         test.addNumber(40);
+//     //         test.addNumber(16);
+//     //         test.addNumber(500);
+//     //         std::cout << test.shortestSpan() << std::endl;
+//     //         std::cout << test.longestSpan() << std::endl;            
+//     // }
+//     catch(std::exception &e)
+//     {
+//         std::cout << e.what() << std::endl;
+//     }
+// }
 
 // int main() {
 //     const int numElements = 30;
