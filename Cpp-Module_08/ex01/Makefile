@@ -2,7 +2,7 @@ NAME = span
 
 SRC = main.cpp Span.cpp
 
-CC = g++
+CC = c++ -std=c++98
 
 FLAGS = -Wall -Wextra -Werror -g -fsanitize=address
 
