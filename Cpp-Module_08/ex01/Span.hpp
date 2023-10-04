@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:38:29 by enja              #+#    #+#             */
-/*   Updated: 2023/10/02 11:07:25 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/04 04:06:21 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ class Span{
                     class NoSpanException : public std::exception{
                          const char* what() const throw();
                     };
-                    void	addNumber(int n);
-                    void	addMultiNumber(int *first, int *last);
+                    void	     addNumber(int n);
+                    void	     addMultiNumber( std::vector<int>::iterator begin, std::vector<int>::iterator end, std::vector<int> c);
                     int		shortestSpan();
                     int		longestSpan();
 };

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/01 11:46:05 by enja              #+#    #+#             */
-/*   Updated: 2023/10/02 11:10:00 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/04 04:26:41 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ Span::Span(unsigned int n)
 
 Span::Span()
 {
+    size = 0;
     std::cout << "Defualt Constructor" << std::endl;
 }
 
@@ -86,9 +87,13 @@ int    Span::longestSpan()
     return min;
 }
 
-void	Span::addMultiNumber(int *first, int *last)
+void	Span::addMultiNumber( std::vector<int>::iterator begin, std::vector<int>::iterator end, std::vector<int> c)
 {
-    vec.insert(vec.begin(), first, last+1);
+    if (c.size() > (size - vec.size()))
+        throw FilledException();
+    else
+        vec = c;
+    vec.insert(vec.begin(), begin, end);
 }
 
 const char * Span::FilledException::what() const throw()
