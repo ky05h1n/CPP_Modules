@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:56:34 by enja              #+#    #+#             */
-/*   Updated: 2023/10/05 04:56:45 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/05 08:42:03 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,18 @@ int main(int ac, char **av)
     if (ac == 2)
     {
         try{
-                Rpn obj(++av);
-                std::cout << obj.GetRpn() << std::endl;
+            Rpn obj(++av);
+                try{
+                        obj.RpnCalculation();
+                        }
+                        catch (std::exception &e)
+                        {
+                            std::cout << "Exception : operation error" << std::endl;
+                            }
         }
         catch (std::exception &e)
         {
-            std::cout << "parse error" << std::endl;
+            std::cout << "Exception : parse error" << std::endl;
         }
     }
     else

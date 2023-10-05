@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:42:35 by enja              #+#    #+#             */
-/*   Updated: 2023/10/05 04:55:30 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/05 10:58:01 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 #include <iostream>
 #include <stack>
+#include <algorithm>
+#include <string>
+#include <cstdlib>
 
 class Rpn{
 
@@ -21,6 +24,7 @@ class Rpn{
 
                     std::string rpn;
                     std::stack<int> data;
+                    std::string operators;
             
             public:
 
@@ -31,6 +35,8 @@ class Rpn{
 
                     class ParsError : public std::exception{
                     };
+                    class OperationError : public std::exception{  
+                    };
                     std::string GetRpn();
-                    void    CheckData(std::string& rpn);
+                    void    RpnCalculation();
 };
