@@ -1,6 +1,6 @@
-NAME = mutantstack
+NAME = RPN
 
-SRC = main.cpp 
+SRC = main.cpp RPN.cpp
 
 CC = c++ -std=c++98
 
@@ -17,8 +17,3 @@ clean :
 flcean : clean
 
 re : flcean all
-
-
-# 1 map
-# 2 stack
-# 3 deque , vector
