@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:42:27 by enja              #+#    #+#             */
-/*   Updated: 2023/10/05 12:02:27 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/05 12:50:12 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void    Rpn::RpnCalculation()
         if (rpn[i] >= '0' && rpn[i] <= '9')
         {
             int num = rpn[i] - '0';
-            //std::cout << num << std::endl;
             data.push(num);
         }
         else
