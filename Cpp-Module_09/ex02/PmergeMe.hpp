@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:12 by enja              #+#    #+#             */
-/*   Updated: 2023/10/06 08:54:57 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/06 14:34:05 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 #include <vector>
 #include <deque>
 #include <cstring>
-
+#include <algorithm>
 class PmergeMe{
 
 
             private:
 
-                    std::vector<int> vecmerge;
-                    std::deque<int> deqmerge;
+                    std::vector<int> vec;
+                    std::deque<int> deq;
                     std::string     data;
 
             public:
@@ -32,4 +32,6 @@ class PmergeMe{
                     ~PmergeMe();
                     PmergeMe(const PmergeMe& obj);
                     const PmergeMe& operator = (const PmergeMe& obj);
+
+                    class ErrorException : public std::exception{};
 };

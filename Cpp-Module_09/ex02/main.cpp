@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:04 by enja              #+#    #+#             */
-/*   Updated: 2023/10/06 08:51:03 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/06 14:55:46 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,10 @@ int main(int ac , char **av)
     {
         try{
             PmergeMe obj(++av);
-            
         }
         catch (std::exception &e)
         {
-            std::cout << "Exception : Error !" << std::endl;
+            std::cout << "Error" << std::endl;
         }
     }
     else
