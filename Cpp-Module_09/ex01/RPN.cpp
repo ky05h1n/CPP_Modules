@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:42:27 by enja              #+#    #+#             */
-/*   Updated: 2023/10/06 04:01:13 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/06 10:02:03 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 Rpn::Rpn(char **av)
 {
+    for (int i = 0; av[i]; i++)
+        rpn += av[i];
+   // std::cout << rpn << std::endl;
     operators = " +*/-";
-    rpn = *av;
     for (int i = 0; rpn[i]; i++)
     {
         if (rpn[i] < '0' || rpn[i] > '9')
@@ -86,10 +88,9 @@ void    Rpn::RpnCalculation()
                                 temp2 *= temp1;
                             else
                             {
-                                if(temp1 != 0)
-                                    temp2 /= temp1;
-                                throw OperationError();
-                                    
+                                if(temp1 == 0)
+                                    throw OperationError();
+                                temp2 /= temp1;    
                             }
                             data.push(temp2);
                         }

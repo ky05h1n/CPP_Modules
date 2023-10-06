@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:42:35 by enja              #+#    #+#             */
-/*   Updated: 2023/10/05 10:58:01 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/06 09:38:36 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <stack>
 #include <algorithm>
 #include <string>
-#include <cstdlib>
+#include <cstring>
 
 class Rpn{
 
