@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 03:42:27 by enja              #+#    #+#             */
-/*   Updated: 2023/10/05 12:50:12 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/06 04:01:13 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,8 +85,12 @@ void    Rpn::RpnCalculation()
                             else if (rpn[i] == '*')
                                 temp2 *= temp1;
                             else
-                                temp2 /= temp1;
-    
+                            {
+                                if(temp1 != 0)
+                                    temp2 /= temp1;
+                                throw OperationError();
+                                    
+                            }
                             data.push(temp2);
                         }
                 }

@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/05 13:58:55 by enja              #+#    #+#              #
-#    Updated: 2023/10/05 13:58:56 by enja             ###   ########.fr        #
+#    Created: 2023/10/05 13:59:02 by enja              #+#    #+#              #
+#    Updated: 2023/10/05 14:00:04 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mutantstack
+NAME = PmergeMe
 
-SRC = main.cpp 
+SRC = main.cpp PmergeMe.cpp
 
 CC = c++ -std=c++98
 
@@ -29,8 +29,3 @@ clean :
 flcean : clean
 
 re : flcean all
-
-
-# 1 map
-# 2 stack
-# 3 deque , vector
