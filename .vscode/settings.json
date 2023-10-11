@@ -73,6 +73,7 @@
         "optional": "cpp",
         "ratio": "cpp",
         "sstream": "cpp",
-        "stack": "cpp"
+        "stack": "cpp",
+        "filesystem": "cpp"
     }
 }

@@ -6,34 +6,32 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:14 by enja              #+#    #+#             */
-/*   Updated: 2023/10/07 19:37:53 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/08 14:26:50 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PmergeMe.hpp"
+
+long int	get_time(void)
+{
+	struct timeval	timing;
+	long int		time;
+
+	gettimeofday(&timing, NULL);
+	time = (timing.tv_sec * 1000 * 1000) + (timing.tv_usec);
+	return (time);
+}
 
 PmergeMe::PmergeMe(char **av)
 {
     for (int i = 0; av[i]; i++)
         data += av[i];
     for (int i = 0; i < (int)data.size(); i++)
-    {
         if (data[i] < '0' || data[i] > '9')
             throw ErrorException();
-    }
     for (int i = 0; av[i]; i++)
-    {
         if (!strcmp(av[i], ""))
             throw ErrorException();
-        int num = atoi(av[i]);
-        if (std::find(vec.begin(), vec.end(), num) == vec.end())
-         {
-            vec.push_back(num);
-            deq.push_back(num);
-         }
-         else
-            throw ErrorException();
-    }
 }
 
 PmergeMe::~PmergeMe(){}
@@ -55,8 +53,17 @@ const PmergeMe& PmergeMe::operator = (const PmergeMe& obj)
     return *this;
 }
 
-void    PmergeMe::VectorSort()
+void    PmergeMe::VectorSort(char **av)
 {
+    long int start = get_time();
+    for (int i = 0; av[i]; i++)
+    {
+        int num = atoi(av[i]);
+        if (std::find(vec.begin(), vec.end(), num) == vec.end())
+            vec.push_back(atoi(av[i]));
+        else
+            throw ErrorException();
+    }
     sig = false;
     if (vec.size() % 2 != 0)
     {
@@ -84,16 +91,23 @@ void    PmergeMe::VectorSort()
     {
         std::vector<int>::iterator pos = std::lower_bound(largestvec.begin(), largestvec.end(), hold);
         largestvec.insert(pos, hold);
+        vec.push_back(hold);
     }
-
-    for (int i = 0; i < (int)largestvec.size(); i ++)
-    {
-        std::cout << largestvec[i] << std::endl;
-    }
+    long int end = get_time();
+    Vec_time = end - start;
 }
 
-void    PmergeMe::DequeSort()
+void    PmergeMe::DequeSort(char **av)
 {
+   long int start = get_time();
+    for (int i = 0; av[i]; i++)
+    {
+        int num = atoi(av[i]);
+        if (std::find(deq.begin(), deq.end(), num) == deq.end())
+            deq.push_back(atoi(av[i]));
+        else
+            throw ErrorException();
+    }
     sig = false;
     if (deq.size() % 2 != 0)
     {
@@ -122,9 +136,25 @@ void    PmergeMe::DequeSort()
         std::deque<int>::iterator pos = std::lower_bound(largestdeq.begin(), largestdeq.end(), hold);
         largestdeq.insert(pos, hold);
     }
+    long int end = get_time();
+    Deq_time = end - start;
+}
 
-    for (int i = 0; i < (int)largestdeq.size(); i ++)
-    {
-        std::cout << largestdeq[i] << std::endl;
-    }
+
+void    PmergeMe::GetData()
+{
+    std::cout << "Before :";
+    for (int i = 0; i < (int)vec.size(); i++)
+        std::cout << " " << vec[i];
+
+    std::cout << std::endl;
+
+    std::cout << "After :";
+    for (int i = 0; i < (int)largestvec.size(); i++)
+        std::cout << " " << largestvec[i];
+
+    std::cout << std::endl;
+    
+    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::vector : " << Vec_time << std::endl;
+    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::deque : " << Deq_time << std::endl;
 }

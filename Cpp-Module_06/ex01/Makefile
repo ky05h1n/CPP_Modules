@@ -6,7 +6,7 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 14:21:40 by enja              #+#    #+#              #
-#    Updated: 2023/09/05 15:09:22 by enja             ###   ########.fr        #
+#    Updated: 2023/10/08 15:30:51 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Serialization
 
 SRC = main.cpp Serializer.cpp
 
-CC = g++
+CC = c++
 
 FLAGS = -Wall -Wextra -Werror
 

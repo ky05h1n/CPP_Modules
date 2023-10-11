@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:12 by enja              #+#    #+#             */
-/*   Updated: 2023/10/07 19:36:32 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/08 13:44:23 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <deque>
 #include <cstring>
 #include <algorithm>
+#include <sys/time.h>
 
 class PmergeMe{
 
@@ -34,6 +35,8 @@ class PmergeMe{
                     std::deque<int>                     largestdeq;
                     std::deque<int>                     smallestdeq;
                     bool                                sig;
+                    long int                            Deq_time;
+                    long int                            Vec_time;
 
             public:
 
@@ -43,6 +46,7 @@ class PmergeMe{
                     const PmergeMe& operator = (const PmergeMe& obj);
 
                     class ErrorException : public std::exception{};
-                    void    VectorSort();
-                    void    DequeSort();
+                    void    VectorSort(char **av);
+                    void    DequeSort(char **av);
+                    void    GetData();
 };

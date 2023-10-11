@@ -6,13 +6,13 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/05 13:58:55 by enja              #+#    #+#              #
-#    Updated: 2023/10/05 13:58:56 by enja             ###   ########.fr        #
+#    Updated: 2023/10/08 16:14:26 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = mutantstack
+NAME = btc
 
-SRC = main.cpp 
+SRC = main.cpp BitcoinExchange.cpp
 
 CC = c++ -std=c++98
 
@@ -29,8 +29,3 @@ clean :
 flcean : clean
 
 re : flcean all
-
-
-# 1 map
-# 2 stack
-# 3 deque , vector

@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:04 by enja              #+#    #+#             */
-/*   Updated: 2023/10/07 19:38:22 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/08 13:44:05 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ int main(int ac , char **av)
     {
         try{
             PmergeMe obj(++av);
-            obj.VectorSort();
-            obj.DequeSort();
+            obj.VectorSort(av);
+            obj.DequeSort(av);
+            obj.GetData();
         }
         catch (std::exception &e)
         {
