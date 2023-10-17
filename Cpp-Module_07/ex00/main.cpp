@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 15:14:58 by enja              #+#    #+#             */
-/*   Updated: 2023/09/06 16:45:58 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/13 22:44:44 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,33 @@ int main( void ) {
     std::cout << "max( c, d ) = " << ::max( c, d ) << std::endl;
 return 0;
 }
+
+
+// class Awesome
+// {
+//   public:
+//     Awesome(void) : _n(0) {}
+//     Awesome( int n ) : _n( n ) {}
+//     Awesome & operator= (Awesome & a) { _n = a._n; return *this; }
+//     bool operator==( Awesome const & rhs ) const { return (this->_n == rhs._n); }
+//     bool operator!=( Awesome const & rhs ) const{ return (this->_n != rhs._n); }
+//     bool operator>( Awesome const & rhs ) const { return (this->_n > rhs._n); }
+//     bool operator<( Awesome const & rhs ) const { return (this->_n < rhs._n); }
+//     bool operator>=( Awesome const & rhs ) const { return (this->_n >= rhs._n); }
+//     bool operator<=( Awesome const & rhs ) const { return (this->_n <= rhs._n); }
+//     int get_n() const { return _n; }
+//   private:
+//     int _n;
+// };
+// std::ostream & operator<<(std::ostream & o, const Awesome &a) { o << a.get_n(); return o; }
+
+// int main(void)
+// {
+// 	Awesome a(2), b(4);
+
+//         swap(a, b);
+//         std::cout << a << " " << b << std::endl;
+//         std::cout << max(a, b) << std::endl;
+//         std::cout << min(a, b) << std::endl;
+//         return (0);
+// }

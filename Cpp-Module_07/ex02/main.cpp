@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/06 17:09:40 by enja              #+#    #+#             */
-/*   Updated: 2023/10/04 03:36:22 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/13 22:37:27 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 
 int main(int, char**)
 {
-
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
@@ -62,6 +61,5 @@ int main(int, char**)
         numbers[i] = rand();
     }
     delete [] mirror;//
-
     return 0;
 }

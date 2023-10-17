@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:14 by enja              #+#    #+#             */
-/*   Updated: 2023/10/08 14:26:50 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/17 10:36:49 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ long int	get_time(void)
 	long int		time;
 
 	gettimeofday(&timing, NULL);
-	time = (timing.tv_sec * 1000 * 1000) + (timing.tv_usec);
+	time = (timing.tv_sec * 1000000) + (timing.tv_usec);
 	return (time);
 }
 
@@ -155,6 +155,6 @@ void    PmergeMe::GetData()
 
     std::cout << std::endl;
     
-    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::vector : " << Vec_time << std::endl;
-    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::deque : " << Deq_time << std::endl;
+    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::vector : " << Vec_time << " us" << std::endl;
+    std::cout << "Time to process a range of " << largestvec.size() << " elements with std::deque : " << Deq_time  << " us" << std::endl;
 }
