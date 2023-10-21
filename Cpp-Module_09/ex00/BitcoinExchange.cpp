@@ -6,11 +6,21 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:13:02 by enja              #+#    #+#             */
-/*   Updated: 2023/10/17 10:25:29 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/21 07:03:34 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "BitcoinExchange.hpp"
+
+void ValidFile()
+{
+    std::cout << "      Date | Value" << std::endl;
+    std::cout << "      2011-01-03 | 3" << std::endl;
+    std::cout << "      2011-01-03 | 2" << std::endl;
+    std::cout << "      2011-01-03 | 1" << std::endl;
+    std::cout << "      2011-01-03 | 1.2" << std::endl;
+    std::cout << "      2011-01-09 | 1" << std::endl;
+}
 
 BitcoinExchange::BitcoinExchange()
 {
@@ -33,20 +43,37 @@ BitcoinExchange::BitcoinExchange()
     file.close();
 }
 
-
 void    BitcoinExchange::ParsInput(char **av)
 {    
     std::ifstream inputcheck(*av);
     inputcheck.seekg(0, std::ios::end);
     if (!inputcheck.is_open() || inputcheck.tellg() == 0)
+    {
+        inputcheck.close();
         throw FileError();
+    }
     inputcheck.close();
 
-    std::ifstream inputfile(*av);
     std::string line;
+    std::ifstream inputfile(*av);
     std::getline(inputfile, line);
     if (line != "date | value")
+    {
+        inputfile.close();
         throw FileError();
+    }
+
+    std::string lines;
+    std::ifstream fl(*av);
+    size_t min_lines = 0;
+    while(std::getline(fl, lines))
+        min_lines++;
+    if (min_lines < 2)
+    {
+        fl.close();
+        throw FileError();
+    }
+    fl.close();
 
     bool sig;
     std::string format = "0000-00-00 | ";
@@ -80,15 +107,23 @@ void    BitcoinExchange::ParsInput(char **av)
         int year = atoi(line.substr(0, pos).c_str());
         int month = atoi(line.substr(pos + 1, pos + 2).c_str());
         int day = atoi(line.substr(pos + 4).c_str());
-        if (year < 2009 || ( year == 2009 && month == 1 && day < 2) || year > 2022 || (year == 2022 && (month > 3 || (month == 3 && day > 29))))
-        {            
-            std::cout << "Error: date not found in the data base " << line << std::endl;
+        if (day > 31 || day < 1 || month > 12 || month < 1)
+        {
+            if (!sig)
+                std::cout << "Error: bad input => " << line << std::endl;
+            continue;
+        }
+        if ((month < 8 && month % 2 == 0 && day > 30) || (month > 7 && month % 2 != 0 && day > 30) || (month == 2 &&  ((year % 4 != 0 && day > 28) || day > 29)))
+        {
+            if (!sig)
+                std::cout << "Error: bad input => " << line << std::endl;
             continue;
         }
         int limit = year * 10000   + month * 100 + day;
         if (limit < 20090102 || limit > 20220329)
         {
-            std::cout << "Error: bad input => " << line << std::endl;
+            if (!sig)
+                std::cout << "Error: date not found in the data base " << line << std::endl;
             continue;
         }
         if (!sig)
@@ -123,9 +158,15 @@ void    BitcoinExchange::ParsInput(char **av)
             {
                 double val = atof(valstr.c_str());
                 if (val < 0 )
+                {
                     std::cout << "Error: not a positive number" <<  std::endl;
+                    sig = true;
+                }
                 else if (val > 1000)
+                {
                     std::cout << "Error: too large a number" << std::endl;
+                    sig = true;
+                }
             }
         }
         if (!sig)
@@ -144,6 +185,7 @@ void    BitcoinExchange::getData(std::string line)
     else
     {
         std::map<std::string, double>::iterator it = data_base.lower_bound(date);
+        it--;
         std::cout << line << " => " << std::fixed << data_base[it->first] * std::atof(line.substr(13).c_str()) << std::endl;
     }
 }

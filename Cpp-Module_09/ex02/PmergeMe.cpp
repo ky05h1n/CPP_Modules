@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/05 14:01:14 by enja              #+#    #+#             */
-/*   Updated: 2023/10/17 10:36:49 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/19 02:43:50 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ void    PmergeMe::VectorSort(char **av)
         largestvec.insert(pos, hold);
         vec.push_back(hold);
     }
+    
     long int end = get_time();
     Vec_time = end - start;
 }

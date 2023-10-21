@@ -6,7 +6,7 @@
 #    By: enja <enja@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/05 13:58:51 by enja              #+#    #+#              #
-#    Updated: 2023/10/06 03:57:35 by enja             ###   ########.fr        #
+#    Updated: 2023/10/19 06:42:13 by enja             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ SRC = main.cpp RPN.cpp
 
 CC = c++ -std=c++98
 
-FLAGS = -Wall -Wextra -Werror #-g -fsanitize=address
+FLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
@@ -26,6 +26,6 @@ $(NAME) : $(SRC)
 clean : 
 		rm -rf $(NAME)
 
-flcean : clean
+fclean: clean
 
-re : flcean all
+re : fclean all

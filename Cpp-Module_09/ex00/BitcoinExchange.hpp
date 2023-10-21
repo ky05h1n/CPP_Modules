@@ -6,7 +6,7 @@
 /*   By: enja <enja@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/08 16:12:57 by enja              #+#    #+#             */
-/*   Updated: 2023/10/10 18:39:02 by enja             ###   ########.fr       */
+/*   Updated: 2023/10/19 05:32:19 by enja             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,3 +37,5 @@ class BitcoinExchange{
                     void    getData(std::string line);
 
 };
+
+void    ValidFile();
